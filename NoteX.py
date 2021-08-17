@@ -1,0 +1,12 @@
+from tkinter import *
+root = Tk()
+root.geometry("350x350")
+root.title("NoteX")
+root.minsize(height = 250, width = 350)
+root.maxsize(height = 250, width = 350)
+Scorollbar = Scorollbar(root)
+Scorollbar.pack(side = RIGHT, fill = Y)
+text_info = Text(root, yscrollcommand = Scorollbar.set)
+text_info.pack(fill = BOTH)
+Scorollbar.config(commsnd = text_info.yview)
+root.mainloop()
